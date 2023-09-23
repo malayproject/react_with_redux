@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+body {
+    width: 100vw;
+    background-color: aliceblue;
+    padding: 0;
+}
+.app {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.app > h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+.accountDetails {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 10rem;
+    border: 1px solid black;
+}
+
+.accountParameter {
+    font-size: 2.5rem;
+}
+
+.modifyAccount {
+    display: flex;
+}
+
+.modifyAccount > * {
+    flex-basis: 50%;
+    flex-grow: 1;
+    border: 1px solid black;
+}
+
+.amountContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20rem;
+    padding: 1rem;
+}
+
+button {
+    height: 3.5rem;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 6px;
+    margin: 0 1rem 0 1rem;
+    min-width: 20rem;
+    font-size: 1.5rem;
+    padding: 0 2rem 0 2rem;
+    cursor: pointer;
+}
