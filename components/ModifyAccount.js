@@ -7,7 +7,9 @@ const ModifyAccount = () => {
     (state) => state
   );
 
-  return (
+  return store_amount.error || store_points.error ? (
+    <p>{"something went wrong"}</p>
+  ) : (
     <div className="modifyAccount">
       <AmountContainer parameter="Amount" paramValue={store_amount.amount} />
       <AmountContainer parameter="Bonus" paramValue={store_points.points} />

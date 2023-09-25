@@ -16,7 +16,7 @@ export const amountReducer = (state = initialAmountState, action) => {
         draft.amount = action.payload;
         draft.pending = false;
       });
-    case AMOUNT_ACTION_TYPES.INIT_PENDING:
+    case AMOUNT_ACTION_TYPES.INIT_REJECTED:
       return produce(state, (draft) => {
         draft.pending = false;
         draft.error = action.error;
@@ -59,11 +59,14 @@ export const pointsReducer = (state = initialPointsState, action) => {
         draft.points = action.payload;
         draft.pending = false;
       });
-    case POINTS_ACTION_TYPES.INIT_PENDING:
+    case POINTS_ACTION_TYPES.INIT_REJECTED: {
+      console.log("rejected action", action);
       return produce(state, (draft) => {
         draft.pending = false;
         draft.error = action.error;
       });
+    }
+
     case POINTS_ACTION_TYPES.INCREMENT:
       return produce(state, (draft) => {
         ++draft.points;
